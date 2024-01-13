@@ -4,6 +4,10 @@
 * {
     font-family: 'Work Sans', sans-serif;
 }
+.text-light-gray{
+    color: gray
+}
+
 .btn-primary{
     border-radius: 8px;
     background: orange;
@@ -14,6 +18,12 @@
     border: 0;
     cursor: pointer;
 }
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: black;
+}
+
 /* header style */
 header{
     background: rgba(255, 144, 14, 0.10);
@@ -25,11 +35,7 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
-.nav title{
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: black;
-}
+
 
 nav > ul{
     display: flex;
@@ -56,41 +62,15 @@ nav li a{
 .banner title{
     font-size: 4rem;
     font-weight: 700;
-    color: black;
+    color: gray;
 
 }
-.banner-discription{
-    color: black;
 
-}
 .banner img{
     width: 100%;
     margin-top: 20px;
 }
-/* responsive media quary */
-/* mobile devices */
 
-@media screen and (max-width: 576px) {
-    header{
-        padding: 20px;
-    }
-    nav{
-        flex-direction: column;
-    }
-    
-}
-/* medium devices */
-@media screen and(min-width: 576px) and (max-width:960px) {
-    header{
-        padding: 50px;
-    }
-    
-    nav{
-        flex-direction: column;
-
-    }
-    
-}
 /* main styles */
 main{
     max-width: 1440px;
@@ -101,7 +81,7 @@ main{
     display: flex;
     align-items: center;
 }
-.teams-container{
+.teams-img-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem; 
@@ -111,14 +91,82 @@ main{
     padding-right: 70px;
 }
 .teams-tile{
-    font-size: 2.rem;
+    font-size: 2.8rem;
 
 }
 .teams-tile  .quick-list{
-    color: #727272;
+  
     font-weight: 500;
 }
 .teams-tile .text-futsure{
     color: #ff900E;
     font-weight: 700;
+}
+
+
+/* facts section */
+.facts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.facts-card-container .card{
+    border-radius: 8px;
+    border: 1px solid #ff900E;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.facts-card-container .card-title{
+    font-weight: 600;
+    color: #727272;
+    font-size: 1.25rem;
+}
+
+.facts-card-container .card-stats{
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* responsive media quary */
+
+/* mobile devices */
+
+@media screen and (max-width: 576px) {
+    header{
+        padding: 20px;
+    }
+    nav,
+    .teams-container
+    {
+    {
+        flex-direction: column;
+    }
+    
+    .teams-img-container{
+        grid-template-columns: 1fr;
+    }
+    .teams-content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    }
+}
+/* medium devices */
+@media screen and(min-width: 576px) and (max-width:960px) {
+    header{
+        padding: 50px;
+    }
+    
+    nav, .teams-container
+    {
+        flex-direction: column;
+
+    }
+
+    
 }
